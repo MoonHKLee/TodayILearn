@@ -130,3 +130,14 @@ class PersonPlus extends Person{
         return this.age;
     }
 }
+
+
+하지만 __proto__ 를 사용하는 방법은 자바스크립트에서 정식으로 표준 지원하는 기능은 아니다.
+물론 모든 브라우저들이 이 기능을 지원하기는 하지만 정식표준 기능은 따로있다.
+바로 Object.create(superObject)를 사용하는 것이다.
+
+예를 들어서
+
+let superObj ={superVal:'super'}; 
+
+subObj = Object.create(superObj); // subObj 가 superObj를 상속한다.
