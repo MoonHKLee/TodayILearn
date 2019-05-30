@@ -54,4 +54,73 @@ IOC의 핵심은 빈팩토리 인터페이스이다.
 ## 0521
 파이썬 filter 함수 검색.
 
+## 0530
+JS--> __proto__를 사용한 Object간의 상속
 
+자바에서는 클래스간의 extends를 통해서 상속을 가능하게 하지만
+자바스트립트에서는 프로토 타입을 총해서 상속을 가능케 할 수 있다.
+
+예를 들어서 
+
+class Person{
+  int age;
+  String name;
+  String job;
+  
+  Person(int age, String name, String job){
+    this.age = age;
+    this.name = name;
+    this. job = job;
+  }
+}
+
+class Student extends Person{
+  int grade;
+  String schoolName;
+  
+  Student(int age, String name, String job, int grade, String schoolName){
+    super(age,name,job);
+    this.grade = grade;
+    this.schoolName = schoolName;
+  }
+}
+
+이라는 클래스 형태를 통해서 상속을 진행했다면
+자바스트립트에서는 
+
+let superObj = {superVal:'super'};
+let subObj = {subVal:'sub'};
+
+subObj.__proto__ = superObj;
+
+라는 형태를 통해서 객체의 __proto__를 이용하여 객체간의 상속을 연결지을 수 있다.
+
+물론  ES6 이후에 자바스트립트에도 class 개념을 도입하여 extends 를 사용하여 삭속을 진행 할 수 있기는 하다.
+그 방법은 다음과 같다.
+
+class Person{
+    constructor(name, age, grade){
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+
+    }
+    introduce() {
+        return 'my name is \''+this.name+'\'. and i\'m \''+this.age+'\'. and i \'m \''+this.grade+'\'grade.';
+    };
+}
+
+class PersonPlus extends Person{
+    constructor(name,age,grade,iq){
+        super(name,age,grade);
+        this.iq=iq;
+    }
+
+    introduce() {
+        return 'my name is \''+this.name+'\'. and i\'m \''+this.age+'\'. and i \'m \''+this.grade+'\'grade.';
+    };
+
+    getIq(){
+        return this.age;
+    }
+}
