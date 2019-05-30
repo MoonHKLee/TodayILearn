@@ -63,13 +63,19 @@ JS--> __proto__를 사용한 Object간의 상속
 예를 들어서 
 
 class Person{
+
   int age;
+  
   String name;
+  
   String job;
   
   Person(int age, String name, String job){
+  
     this.age = age;
+    
     this.name = name;
+    
     this. job = job;
   }
 }
@@ -91,7 +97,7 @@ class Student extends Person{
 let superObj = {superVal:'super'};
 let subObj = {subVal:'sub'};
 
-subObj.__proto__ = superObj;
+subObj. __ proto __ = superObj;
 
 라는 형태를 통해서 객체의 __proto__를 이용하여 객체간의 상속을 연결지을 수 있다.
 
@@ -116,7 +122,7 @@ class PersonPlus extends Person{
         this.iq=iq;
     }
 
-    introduce() {
+    introducse() {
         return 'my name is \''+this.name+'\'. and i\'m \''+this.age+'\'. and i \'m \''+this.grade+'\'grade.';
     };
 
