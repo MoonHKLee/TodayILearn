@@ -15,3 +15,5 @@ JSX를 사용할 때 싱글캐그를 닫을때는 /를 붙이지 않으면 에�
 리액트는 state가 변한것으로 인식한다. 그렇기때문에 렌더링이 실행되는 조건을 걸어야한다.
 shouldComponentUpdate를 사용해야한다. true를 리턴하면 렌더링을 실행시키고, false를 리턴하면 렌더링이 실행되지 않는다.
 혹은 상속을 받을때 Component에서 상속을 받지 않고 PureComponent에서 상속을 받으면 해결된다.
+
+hooks에서는 memo를 사용하면 된다.
