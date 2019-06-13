@@ -17,3 +17,11 @@ shouldComponentUpdate를 사용해야한다. true를 리턴하면 렌더링을 �
 혹은 상속을 받을때 Component에서 상속을 받지 않고 PureComponent에서 상속을 받으면 해결된다.
 
 hooks에서는 memo를 사용하면 된다.
+
+## 0613
+
+웹 디자인을 편하게 해주는 사이트 목록
+-bootstrap
+-semantic-ui
+-material-ui
+-antdesign
