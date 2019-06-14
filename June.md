@@ -27,7 +27,7 @@ hooks에서는 memo를 사용하면 된다.
 -antdesign
 
 ## 0614
-props로 넘겨주는 함수는 useCallback이 필수다.
+자식 컴포넌트에 props로 넘겨주는 함수는 useCallback이 필수다.
 
 _document.js     -> html,head,body
 
@@ -36,3 +36,5 @@ _app.js          -> root
 pages            -> 실제 컴포넌트
 
 error.js         -> 에러발생시 화면 
+
+
